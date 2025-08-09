@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>New Trending Modi Song</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
     body {
       margin: 0;
       background-color: black;
@@ -14,11 +16,17 @@
       justify-content: center;
       height: 100vh;
       color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      box-sizing: border-box;
     }
     iframe {
       border: none;
       width: 100%;
+      max-width: 800px;
       height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
     }
     button {
       margin-top: 10px;
@@ -29,6 +37,23 @@
       cursor: pointer;
       font-size: 16px;
       border-radius: 5px;
+      max-width: 200px;
+    }
+    .credits {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #ccc;
+      text-align: center;
+      max-width: 800px;
+      line-height: 1.5;
+    }
+    .watch-share {
+      margin-top: 12px;
+      font-family: 'Pacifico', cursive;
+      font-size: 20px;
+      color: #ff4c4c;
+      text-shadow: 1px 1px 3px black;
+      user-select: none;
     }
   </style>
 </head>
@@ -36,6 +61,13 @@
   <h1>New Trending Modi Song</h1>
   <iframe id="ytplayer" src="https://www.youtube.com/embed/6uHHirw1UWg?autoplay=1&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   <button onclick="unmuteVideo()">Unmute</button>
+
+  <div class="credits">
+    Music and Video Editing by <strong>Namaste Music India</strong>, a team in Singapore.<br />
+    Contact: <a href="mailto:namastemusicindia@gmail.com” style="color:#ccc; text-decoration:none;">namastemusicindia@gmail.com</a>
+  </div>
+
+  <div class="watch-share">Please watch and share</div>
 
   <script>
     function unmuteVideo() {
